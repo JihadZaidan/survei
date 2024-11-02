@@ -1,0 +1,119 @@
+/* Global Styles */
+html, body {
+    background-color: #f4f4f4; /* Latar belakang abu-abu terang */
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.75);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 36px;
+    color: #333; /* Warna teks judul */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff; /* Latar belakang tabel putih */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan tabel */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Link Styles */
+a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Latar belakang form putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan form */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Sudut membulat */
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar total */
+}
+
+button {
+    background-color: #28a745; /* Warna hijau untuk tombol */
+    color: white; /* Warna teks putih */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px; /* Sudut membulat */
+    cursor: pointer; /* Ubah kursor saat hover */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none; /* Menghapus tanda list default */
+}
+
+.pagination li {
+    margin: 0 5px; /* Margin horizontal antar elemen pagination */
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    border-radius: 4px; /* Sudut membulat */
+    transition: background-color 0.3s; /* Transisi untuk hover */
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white; /* Warna teks putih saat hover */
+}
+

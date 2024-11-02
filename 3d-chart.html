@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafik 3D dengan Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-3d/dist/chartjs-plugin-3d.min.js"></script>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .chart-container { width: 80%; margin: 20px auto; }
+        canvas { width: 100% !important; height: 400px !important; }
+    </style>
+</head>
+<body>
+
+<div class="chart-container">
+    <canvas id="barChart"></canvas>
+    <canvas id="pieChart"></canvas>
+</div>
+
+<script>
+    // Data contoh
+    const gadgets = ['Gadget A', 'Gadget B', 'Gadget C'];
+    const counts = [10, 20, 15];
+
+    // Grafik Batang
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: gadgets,
+            datasets: [{
+                label: 'Jumlah Siswa per Gadget',
+                data: counts,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                threeD: {
+                    enabled: true, // Aktifkan efek 3D
+                    angle: 30, // Atur sudut untuk efek 3D
+                    shadow: true // Aktifkan bayangan untuk efek 3D
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Grafik Pai
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: gadgets,
+            datasets: [{
+                data: counts,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)'
+                ]
+            }]
+        },
+        options: {
+            plugins: {
+                threeD: {
+                    enabled: true, // Aktifkan efek 3D
+                    angle: 30, // Atur sudut untuk efek 3D
+                    shadow: true // Aktifkan bayangan untuk efek 3D
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
